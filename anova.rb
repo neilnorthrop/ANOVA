@@ -20,17 +20,18 @@ class ANOVA
 
 	def self.mode(array)
 		num_array = array.sort
-		mode_count = {}
+		occurence_count = {}
 		num_array.each do |num|
-			if mode_count.key?(num)
-				mode_count[num] += 1
+			if occurence_count.key?(num)
+				occurence_count[num] += 1
 			else
-				mode_count[num] = 1
+				occurence_count[num] = 1
 			end
 		end
-		valid_mode_candidates = mode_count.delete_if { |key, value| value <= 1 }
+
+		valid_mode_candidates = occurence_count.delete_if { |key, value| value <= 1 }
+
 		mode_hash = {}
-		mode_array = []
 		valid_mode_candidates.each do |key, value|
 			if mode_hash.has_key?(value)
 				mode_hash[value] << key
@@ -39,20 +40,22 @@ class ANOVA
 				mode_hash[value] << key
 			end
 		end
-		print mode_hash
-		puts
-		mode_hash.sort_by! { |key, value| key }
-		print mode_hash
-		puts
-		mode_hash.each { |key, value| mode_array << value.sort.reverse! }
-		print mode_array
-		puts
-		return mode_array.flatten
+
+		keys = mode_hash.keys.sort.reverse
+
+		new_hash_temp_name = {}
+		keys.each do |key|
+			new_hash_temp_name[key] = mode_hash[key]
+		end
+
+		final_mode_array = []
+		new_hash_temp_name.each { |key, value| final_mode_array << value.sort.reverse! }
+
+		return final_mode_array.flatten
 	end
 
-	def self.help
-		#this method would return all ANOVA veriables and explainations of their purpose
-	end
-
+	# def self.help
+	# 	#this method would return all ANOVA veriables and explainations of their purpose
+	# end
 
 end

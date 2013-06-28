@@ -13,21 +13,21 @@ class AnovaTest < MiniTest::Unit::TestCase
     @array_7 = [9, 9, 9, 7, 7, 2, 2, 2, 15, 15, 3, 3, 3, 3, 5, 5, 8, 8, 8, 8]
 	end
 
-  # def test_mean
-  #   assert_equal 5.5, ANOVA.mean(@array)
-  #   assert_equal 250, ANOVA.mean(@array_2)
-  # end
+  def test_mean
+    assert_equal 5.5, ANOVA.mean(@array)
+    assert_equal 250, ANOVA.mean(@array_2)
+  end
 
-  # def test_median
-  #   assert_equal 5.5, ANOVA.median(@array)
-  #   assert_equal 32.5, ANOVA.median(@array_4)
-  #   assert_equal 5, ANOVA.median(@array_3)
-  # end
+  def test_median
+    assert_equal 5.5, ANOVA.median(@array)
+    assert_equal 32.5, ANOVA.median(@array_4)
+    assert_equal 5, ANOVA.median(@array_3)
+  end
 
   def test_mode
-    # assert_equal [5, 1, 10, 7], ANOVA.mode(@array_5)
-    # assert_equal [5], ANOVA.mode(@array_6)
-    # assert_equal [], ANOVA.mode(@array)
+    assert_equal [5, 1, 10, 7], ANOVA.mode(@array_5)
+    assert_equal [5], ANOVA.mode(@array_6)
+    assert_equal [], ANOVA.mode(@array)
     assert_equal [8, 3, 9, 2, 15, 7, 5], ANOVA.mode(@array_7)
   end
 
