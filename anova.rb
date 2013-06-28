@@ -54,6 +54,33 @@ class ANOVA
 		return final_mode_array.flatten
 	end
 
+	# def self.range(array)
+	# end
+
+	# def self.variance(array)
+	# end
+
+	# def self.std_variation(array)
+	# end
+
+	# def self.coefficient_of_variation(array)
+	# end
+
+	# def self.z_score(array)
+	# end
+
+	# def self.shape(array)
+	# end
+
+	# def self.quartile(array)
+	# end
+
+	# def self.geometric_mean(array)
+	# end
+
+	# def self.inter_quartile_range(array)
+	# end
+
 	# def self.help
 	# 	#this method would return all ANOVA veriables and explainations of their purpose
 	# end

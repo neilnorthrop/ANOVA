@@ -31,23 +31,35 @@ class AnovaTest < MiniTest::Unit::TestCase
     assert_equal [8, 3, 9, 2, 15, 7, 5], ANOVA.mode(@array_7)
   end
 
+  def test_range
+  end
+
+  def test_variance
+  end
+
+  def test_std_variation
+  end
+
+  def test_coefficient_of_variation
+  end
+
+  def test_z_score
+  end
+
+  def test_shape
+  end
+
+  def test_quartile
+  end
+
+  def test_geometric_mean
+  end
+
+  def test_inter_quartile_range
+  end
+
   # def test_range
   #   assert_equal
   # end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
